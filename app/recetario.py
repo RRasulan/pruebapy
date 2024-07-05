@@ -3,9 +3,9 @@ from flask import Flask, render_template
 app = Flask(__name__)
 
 @app.route("/")
-def inicio():
-    title="Bienvenido"
-    return render_template("home.html",title=title)
+def index():
+    title="Inicio"
+    return render_template("index.html",title=title)
 
 @app.route("/contacto")
 def contacto():
@@ -16,6 +16,11 @@ def contacto():
 def recetas():
     title="Recetas"
     return render_template("recetas.html", title=title)
+
+@app.route("/nosotros")
+def nosotros():
+    title="Nosotros"
+    return render_template("nosotros.html", title=title)
 
 #@app.route('/agregar_comentario', methods=['POST'])
 #def agregar_comentario():
