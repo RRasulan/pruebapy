@@ -1,21 +1,5 @@
-<!DOCTYPE html>
-<html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{title}}</title>
-
-    <link rel="icon" href="{{url_for('static', filename='img/olla.png)}}" type="image/png">
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="{{url_for('static', filename='css/styles.css')}}">
-    <script src="{{url_for('static', filename='js/scripts.js')}}"></script>
-    <style>
-
-    </style>
+{% include 'defaults/head.html' %}
 </head>
-
 
 <body>
 
@@ -142,7 +126,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <!-- Puedes incluir aquí scripts de JavaScript personalizados -->
-    <script src="{{url_for('static', filename='js/scripts.js')}}"></script>
+    <!--    <script src="{{url_for('static', filename='js/scripts.js')}}"></script> -->
 
 </body>
 
