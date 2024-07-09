@@ -1,30 +1,21 @@
 from flask import Flask, render_template
 
 app = Flask(__name__)
+unMenu = [("/", "Inicio"), ("/recetas", "Recetas"), ("/nosotros", "Nosotros"), ("/contacto", "Contacto")]
 
 @app.route("/")
-def home():
-    title="Inicio"
-    return render_template("index.html",title=title)
-
-@app.route("/contacto")
-def contacto():
-    title="Contacto"
-    return render_template("contacto.html",title=title)
+def cargarIndex():
+    return render_template("index.html", unMenu=unMenu)
 
 @app.route("/recetas")
-def recetas():
-    title="Recetas"
-    return render_template("recetas.html", title=title)
+def cargarRecetas():
+    return render_template("recetas.html", unMenu=unMenu)
 
 @app.route("/nosotros")
-def nosotros():
-    title="Nosotros"
-    return render_template("nosotros.html", title=title)
+def cargarNosotros():
+    return render_template("nosotros.html", unMenu=unMenu)
 
-#@app.route('/agregar_comentario', methods=['POST'])
-#def agregar_comentario():
-#    nombre = request.form.get('nombre')
-#    comentario = request.form.get('comentario')
-#    comentarios.append({'nombre': nombre, 'texto': comentario})
-#    return render_template('comentarios.html', comentarios=comentarios)
+@app.route("/contacto")
+def cargarContacto():
+    return render_template("contacto.html", unMenu=unMenu)
+
