@@ -1,0 +1,29 @@
+<!--
+    {% include 'defaults/head' %}
+    {% include 'defaults/header' %}
+    
+    <section class="container">
+        
+        <div>
+            
+            {% for i in comentarios %}
+            <h1>
+                {{i}[1]} - <span>{{i[2]}}</span>
+                
+                <i class="bi bi-shop"></i>
+                
+            </h1>
+            
+            <hr>
+            
+            {% endfor %}
+            
+        </div>
+        
+        <a href="/comentarios" class="btn btn-warning">Publicar</a>
+        
+    </section>
+    
+    {% include 'defaults/footer.html'%}
+    {% include 'defaults/scriptsjs.html'%}
+    -->

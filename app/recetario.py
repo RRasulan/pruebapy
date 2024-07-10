@@ -1,4 +1,8 @@
 from flask import Flask, render_template
+"""from comentarios import *
+
+from controller import mostrarcomentario"""
+
 
 app = Flask(__name__)
 unMenu = [("/", "Inicio"), ("/recetas", "Recetas"), ("/nosotros", "Nosotros"), ("/contacto", "Contacto")]
@@ -19,3 +23,7 @@ def cargarNosotros():
 def cargarContacto():
     return render_template("contacto.html", unMenu=unMenu)
 
+@app.route("/comentarios")
+def cargarcomentario():
+    title="Comentario"
+    return render_template("form_nuevoc.html", title=title)
