@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, redirect, request
 """from comentarios import *
 
 from controller import mostrarcomentario"""
@@ -26,4 +26,4 @@ def cargarContacto():
 @app.route("/comentarios")
 def cargarcomentario():
     title="Comentario"
-    return render_template("form_nuevoc.html", title=title)
+    return render_template("comentarios.html", title=title)
