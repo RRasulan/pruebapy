@@ -23,13 +23,21 @@ def cargarNosotros():
 def cargarContacto():
     return render_template("contacto.html", unMenu=unMenu)
 
-@app.route("/maryland")
+@app.route("/recetas/maryland")
 def receta1():
     return render_template("maryland.html")
 
-@app.route("/polloperuano")
+@app.route("/recetas/polloperuano")
 def receta2():
     return render_template("polloperuano.html")
+
+@app.route("/recetas/chupecamarones")
+def receta3():
+    return render_template("chupecamarones.html")
+
+@app.route("/recetas/pasticho")
+def receta4():
+    return render_template("pasticho.html")
 
 @app.route("/comentarios")
 def cargarcomentario():
