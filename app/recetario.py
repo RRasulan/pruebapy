@@ -1,7 +1,7 @@
 from flask import Flask, render_template, redirect, request
-"""from comentarios import *
+from comentarios import *
 
-from controller import mostrarcomentario"""
+from controller import mostrarcomentario
 
 
 app = Flask(__name__)
@@ -22,6 +22,9 @@ def cargarNosotros():
 @app.route("/contacto")
 def cargarContacto():
     return render_template("contacto.html", unMenu=unMenu)
+@app.route("/receta1")
+def receta1():
+    return render_template("receta1.html")
 
 @app.route("/comentarios")
 def cargarcomentario():
