@@ -22,9 +22,14 @@ def cargarNosotros():
 @app.route("/contacto")
 def cargarContacto():
     return render_template("contacto.html", unMenu=unMenu)
-@app.route("/receta1")
+
+@app.route("/maryland")
 def receta1():
-    return render_template("receta1.html")
+    return render_template("maryland.html")
+
+@app.route("/polloperuano")
+def receta2():
+    return render_template("polloperuano.html")
 
 @app.route("/comentarios")
 def cargarcomentario():
